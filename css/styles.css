@@ -32,10 +32,23 @@
   }
 
   .container {
-    max-width: 1158px;
+    width: 480px;
+    max-width: 100%;
     padding: 0 15px;
     margin: 0 auto;
   }
+  @media screen and (min-width:768px) {
+    .container {
+        width: 768px;
+        
+      }
+  }
+    @media screen and (min-width:1200px) {
+      .container {
+        width: 1158px;
+        
+      }
+    }
   .visually-hidden {
     position: absolute;
     width: 1px;
@@ -157,6 +170,16 @@
   .footer-logo {
     color: var(--hero-text-color);
    }
+   .site-nav {display: none;}
+     @media screen and (min-width:768px) {
+     .site-nav { 
+     display:flex;
+     }
+     }
+  
+     @media screen and (min-width:1200px) {
+     
+     }
   /* Hero */
   .hero {
     background-color:#2E2F42;
