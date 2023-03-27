@@ -30,7 +30,7 @@
    background-color: var(--hero-text-color);
    font-family: 'Roboto', sans-serif;
   }
-
+/* ready adaptive for container */
   .container {
     width: 480px;
     max-width: 100%;
@@ -49,6 +49,8 @@
         
       }
     }
+  /* ready adaptive for container */
+    /* це утилітарний клас ми його не трогаємо */
   .visually-hidden {
     position: absolute;
     width: 1px;
@@ -63,10 +65,19 @@
     }
   
   .section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 96px;
+    padding-bottom: 96px;
     text-align: center;
   }
+        /* я видалила медіазапит на планшет так як падірги такі самі як у моб */
+  
+    @media screen and (min-width:1200px) {
+      .section {
+      padding-top: 120px;
+      padding-bottom: 120px;
+  
+      }
+    }
 
  /* Header /Navigation*/
   header {
@@ -89,12 +100,11 @@
   }
   .nav-container {
     display: flex;
-    margin-right: 332px;
+    margin-right: auto;
     }
   .site-contacts {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    display: none;
+    
    }
   .email-style {
     text-decoration: none;
@@ -104,9 +114,34 @@
   .email-style:focus {
     color: #404bbf;
   }
+    @media screen and (min-width:768px) {
+  .site-contacts {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-direction: column;
+  
+    }
+
+    }
+    
+  
+    @media screen and (min-width:1200px) {
+      
+        .site-contacts {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-direction: row;
+            
+          }
+  
+      }
+    
     /* site-nav */
   .header-list {
       display: flex;
+
       gap: 40px;
       margin: 0;
       list-style: none;
@@ -184,16 +219,24 @@
   .hero {
     background-color:#2E2F42;
     text-align: center;
-    padding: 188px 0;
+    padding: 112px 0;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url('../images/bgdhero.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    max-width: 1440px;
+    
     margin: 0 auto;
     }
-
+     @media (min-device-pixel-ratio: 2),
+     (-webkit-min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx) {
+       .hero {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+            url('../images/bgdhero.jpg');
+       }
+     }
   .hero-title {
     color: white;
     font-family: 'Roboto';
@@ -207,6 +250,27 @@
 	  margin-left: auto;
 	  max-width: 496px;
     }
+
+        @media screen and (min-width:768px) {
+         .hero {
+        padding-top: ;
+        padding-bottom: ;
+         }
+         
+    
+        }
+    
+    
+        @media screen and (min-width:1200px) {
+        .hero {
+          padding: 188px 0;
+          background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+              url('../images/bgdhero.jpg');
+          max-width: 1440px;
+        }
+         
+    
+        }
 
   /* Buttons */
   .button { 
