@@ -48,8 +48,81 @@
             >
           </li>
         </ul>
-        <button>Burger</button>
+        <button type="button" class="burg-menu-opn is-open-menu" aria-expanded="false">
+          <svg class="burg-menu-opn-icon" widh="32" height="32">
+            <use href="./images/sprite.svg#icon-charm_menu-hamburger"></use> 
+          </svg>
+        </button>
       </div>
+
+      <!--Випадаюче моб меню-->
+       <div class="mobile-menu js-menu-container" >
+        <div class="container mobile-menu-container ">
+         <button class="mobile-menu-close-btn js-close-menu">
+         <svg class="modal-close-icon-menu" width="8" hight="8">
+          <use href="./images/sprite.svg#icon-close-black"></use>
+        </svg>
+      </button>
+
+      <ul class="list-mevu-text" >
+        <li class="list-menu  menu-text">Studio</li>
+        <li class="list-menu  menu-text">Portfolio</li>
+        <li class="list-menu  menu-text">Contacts</li>
+      </ul>
+
+      <div class="menu-flex">
+      <ul class="adress-menu">
+        <li class="list-menu tel-menu" href="tel:+110001111111">+11 (000) 111-11-11</li>
+        <li class="list-menu mail-menu"    href="mailto:info@devstudio.com">info@devstudio.com</li>
+      </ul>
+      <ul class="social-list-menu  list">
+        <li class="social-list-item">
+          <a href="" class="social-list-link"
+            aria-label="linl-for-instsgram"
+            rel="noopener noreferer"
+            target="_blank">
+            <svg class="social-list-icon" width="16" height="16">
+              <use href="./images/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a
+            href=""
+            class="social-list-link"
+            aria-label="linl-for-twitter"
+            rel="noopener noreferer"
+            target="_blank">
+            <svg class="social-list-icon" width="16" height="16">
+              <use href="./images/sprite.svg#icon-twitter1"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a href="" class="social-list-link"
+            aria-label="linl-for-facebook"
+            rel="noopener noreferer"
+            target="_blank">
+            <svg class="social-list-icon" width="16" height="16">
+              <use href="./images/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list-item">
+          <a href="" class="social-list-link"
+            aria-label="linl-for-linkedin"
+            rel="noopener noreferer"
+            target="_blank">
+            <svg class="social-list-icon" width="16" height="16">
+              <use href="./images/sprite.svg#icon-linkedin"></use>
+            </svg>
+          </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </div>
+
     </header>
     <main>
       <!--Герой-->
@@ -384,7 +457,7 @@
     
 
     <!--Footer-->
-    <!--footer class="footer">
+    <footer class="footer">
       <div class="container footer-container">
         <div class="footer-main">
           <a href="./index.html" class="logo logo-accent web"
@@ -394,9 +467,9 @@
             Increase the flow of customers and sales for your business with
             digital marketing & growth solutions.
           </p>
-        </div-->
+        </div>
         <!--Footer-Social media-->
-        <!--div class="box-media">
+        <div class="box-media">
           <h3 class="title smf-title">Social media</h3>
           <ul class="media-list list">
             <li class="icon-item">
@@ -430,8 +503,21 @@
           </ul>
         </div>
       </div>
-    </footer-->
+      <!--Subscribe in footer-->
+        <div class="infoot-subs">
+          <h3 class="title smf-title">Subscribe</h3>
+          <form class="subsform">
+            <input type="text" class="subs-input" placeholder="E-mail">
+            <button class="subsbut">Subscribe <svg class="footer-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-hw6-icon-send"></use>
+                </svg> </button>
+          </form>
+
+        </div>
+      </div>
+    </footer>
     
+     <!--Modal-->
     <div class="backdrop is-hidden" data-modal>
       <div class="modalwindow">
         <button type="button" data-modal-close class="button-close">
@@ -439,17 +525,72 @@
             <use href="./images/sprite.svg#icon-close-black"></use>
           </svg>
         </button>
-        <form>
-          <label>
+
+        <form class="contact-form">
+          
+          <!--New in Modal-->
+          <!--Це заголовок модала і вікно імя-->
+          <p class="modal-header">Leave your contacts and we will call you back</p>
+					<div class="form-group">
+						<label for="user-name" class="label-title">Name</label>
+						<div class="form-control">
+							<input type="text" class="contact-form-input" name="user_name" id="user-name" required />
+							<svg class="contact-icon-input" width="18" height="24">
+								<use href="./images/sprite.svg#icon-hw6-person-black"></use>
+							</svg>
+						</div>
+
+            </div>
+            <div class="form-group">
+						<label for="user-phone" class="label-title">Phone</label>
+						<div class="form-control">
+							<input type="tel" class="contact-form-input" name="user_phone" id="user-phone" required />
+							<svg class="contact-icon-input" width="18" height="24">
+								<use href="./images/sprite.svg#icon-hw6-phone-black"></use>
+							</svg>
+						</div>
+					</div>
+
+            <div class="form-group">
+						<label for="user-email" class="label-title">Email</label>
+						<div class="form-control">
+							<input type="email" class="contact-form-input" name="user_email" id="user-email" 
+              required />
+							<svg class="contact-icon-input" width="18" height="24">
+								<use href="./images/sprite.svg#icon-hw6-black-email"></use>
+							</svg>
+						</div>
+					</div>
+
+					<label for="user-message" class="label-title">Comment</label>
+					<textarea
+						name="user-message"
+						id="user-message"
+						class="contact-form-message"
+						placeholder="Text input"
+					></textarea>
+
+					<div class="checkbox-title">
+						<label class="checkbox-desr">
             <input type="checkbox" class="checkbox visually-hidden" />
             <span class="custom-checkbox"></span>
+            I accept the terms and conditions of the
+							<a href="#" class="checkbox-desr-link">Privacy Policy</a>
           </label>
+						
+					</div>
+      <div class="sendbut" >
+      <button class="submit-button">
+            Send
+          </button>
+          </div>
         </form>
-      </div>
-    </div>
-    <div class="mobile-menu-burg">
       
+
+     
     </div>
+
     <script src="./js/modal.js"></script>
+    <script defer src="./js/modal-menu.js"></script>
   </body>
 </html>
